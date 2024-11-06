@@ -1,39 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   TEST.c                                             :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lefoffan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/06 08:24:04 by lefoffan          #+#    #+#             */
-/*   Updated: 2024/11/06 12:06:42 by lefoffan         ###   ########.fr       */
+/*   Created: 2024/11/06 11:30:44 by lefoffan          #+#    #+#             */
+/*   Updated: 2024/11/06 12:05:43 by lefoffan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//
-#include <unistd.h>
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-void	ft_putstr(char *str)
-{
-	while (*str)
-		write(1, str++, 1);
-}
 
-int	main(int ac, char **av)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	char	*buffer;
+	size_t	i;
 
-	buffer = malloc(sizeof(char) * (ft_strlen(av[1]) + 1));
-	if (ac == 2)
+	i = 0;
+	while (i < size - 1)
 	{
-		printf("original : %s\n", (av[1]));
-		ft_strlcpy(buffer, av[1], ft_strlen(av[1]) + 1);
-		printf("la copy  : %s\n", buffer);
-		return (0);
+		dst[i] = src[i];
+		i++;
 	}
-	ft_putstr("Error");
-	return (1);
+	dst[i] = '\0';
+	return (ft_strlen(src));
 }
