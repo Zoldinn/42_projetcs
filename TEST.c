@@ -1,26 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   TEST.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lefoffan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/04 16:56:17 by lefoffan          #+#    #+#             */
-/*   Updated: 2024/11/06 08:02:39 by lefoffan         ###   ########.fr       */
+/*   Created: 2024/11/06 08:24:04 by lefoffan          #+#    #+#             */
+/*   Updated: 2024/11/06 08:29:46 by lefoffan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <unistd.h>
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+void	ft_putstr(char *str)
 {
-	size_t	i;
+	while (*str)
+		write(1, str++, 1);
+}
 
-	i = 0;
-	while (i < n)
+int	main(int ac, char **av)
+{
+	if (ac == 3)
 	{
-		(unsigned char) dest[i] = (unsigned char) src[i];
-		i++;
+		ft_putstr(ft_strnstr(av[1], av[2], ft_strlen(av[1])));
+		write(1, "\n", 1);
 	}
-	return (dest);
-}	
+	ft_putstr("Error");
+	return (1);
+}
