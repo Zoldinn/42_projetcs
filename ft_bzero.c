@@ -6,7 +6,7 @@
 /*   By: lefoffan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 16:52:01 by lefoffan          #+#    #+#             */
-/*   Updated: 2024/11/07 12:28:44 by lefoffan         ###   ########.fr       */
+/*   Updated: 2024/11/07 17:36:33 by lefoffan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,13 @@
 
 void	ft_bzero(void *s, size_t n)
 {
+	unsigned char	*x;
+
+	x = (unsigned char *) s;
 	while (n)
 	{
 		n--;
-		(unsigned char) s[n] = 0;
+		x[n] = 0;
 	}
 }
 
@@ -28,7 +31,13 @@ void	ft_bzero(void *s, size_t n)
 int	main(void)
 {
 	int	tab[5];
-	ft_bzero(tab, 5);
-	printf("d\n", tab);
+	int	i;
+
+	i = 0;
+	//tab = malloc(sizeof(int) * 5);
+	ft_bzero(tab, 5 * sizeof(int));
+	while (i < 5)
+		printf("%d\n", tab[i++]);
+	//free(tab);
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: lefoffan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 07:50:56 by lefoffan          #+#    #+#             */
-/*   Updated: 2024/11/07 16:22:10 by lefoffan         ###   ########.fr       */
+/*   Updated: 2024/11/07 17:26:01 by lefoffan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,6 @@ int	main(void)
 	tab = calloc(5, sizeof(int));
 	while (i < 5)
 		printf("%d\n", tab[i++]);
+	free(tab);
 	return (0);
 }
