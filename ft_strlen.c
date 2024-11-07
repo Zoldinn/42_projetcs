@@ -6,7 +6,7 @@
 /*   By: lefoffan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 16:41:20 by lefoffan          #+#    #+#             */
-/*   Updated: 2024/11/04 16:43:04 by lefoffan         ###   ########.fr       */
+/*   Updated: 2024/11/07 12:14:53 by lefoffan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,4 +20,19 @@ size_t	ft_strlen(const char *s)
 	while (s[size])
 		size++;
 	return (size);
+}
+
+////////////////////// TEST
+
+#include <stdio.h>
+
+int	main(int ac, char **av)
+{
+	if (ac == 2)
+	{
+		printf("%zu\n", ft_strlen(av[1]);
+		return (0);
+	}
+	printf("ERROR\n");
+	return (1);
 }

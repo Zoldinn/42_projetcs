@@ -6,7 +6,7 @@
 /*   By: lefoffan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 11:21:24 by lefoffan          #+#    #+#             */
-/*   Updated: 2024/11/06 11:29:24 by lefoffan         ###   ########.fr       */
+/*   Updated: 2024/11/07 12:21:05 by lefoffan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,4 +33,19 @@ int	ft_atoi(const char *nptr)
 		nptr++;
 	}
 	return (res * sign);
-}	
+}
+
+////////////////////
+
+#include <stdio.h>
+
+int	main(int ac, char **av)
+{
+	if (ac == 2)
+	{
+		printf("%d\n", ft_atoi((const char *) av[1]));
+		return (0);
+	}
+	printf("ERROR\n");
+	return (1);
+}
