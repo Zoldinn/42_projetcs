@@ -6,7 +6,7 @@
 /*   By: lefoffan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 09:38:09 by lefoffan          #+#    #+#             */
-/*   Updated: 2024/11/07 12:04:34 by lefoffan         ###   ########.fr       */
+/*   Updated: 2024/11/07 16:39:07 by lefoffan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,11 @@
 char	*ft_strchr(const char *s, int c)
 {
 	while (*s != c)
+	{
+		if (*s == '\0' && c != '\0')
+			return (NULL);
 		s++;
-	if (!s)
-		return (NULL);
+	}
 	return ((char *) s);
 }
 
@@ -27,9 +29,15 @@ char	*ft_strchr(const char *s, int c)
 
 int	main(int ac, char **av)
 {
-	if (ac == 2)
+	char	*res;
+
+	if (ac == 3) // pour le test avec '\0' mettre 2
 	{
-		printf("$s\n", ft_strrchr(av[1], (int) av[2][0]));
+		res = ft_strchr(av[1], av[2][0]); // pour le test avec '\0' mettre 0
+		if (res)
+			printf("Found !\n%s\n", res);
+		else
+			printf("Not Found...\n%s\n", res);
 		return (0);
 	}
 	printf("Error\n");
