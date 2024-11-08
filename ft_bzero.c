@@ -6,7 +6,7 @@
 /*   By: lefoffan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 16:52:01 by lefoffan          #+#    #+#             */
-/*   Updated: 2024/11/07 17:36:33 by lefoffan         ###   ########.fr       */
+/*   Updated: 2024/11/08 11:18:20 by lefoffan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	ft_bzero(void *s, size_t n)
 }
 
 /////////////////////
-
+/*
 #include <stdio.h>
 
 int	main(void)
@@ -40,4 +40,4 @@ int	main(void)
 		printf("%d\n", tab[i++]);
 	//free(tab);
 	return (0);
-}
+}*/

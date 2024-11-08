@@ -6,7 +6,7 @@
 /*   By: lefoffan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 07:50:56 by lefoffan          #+#    #+#             */
-/*   Updated: 2024/11/07 17:26:01 by lefoffan         ###   ########.fr       */
+/*   Updated: 2024/11/08 11:33:38 by lefoffan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*dst;
 
-	if (!nmemb || !size)
+	if (!nmemb || !size || (nmemb * size) > 2147483647)
 		return (NULL);
 	dst = malloc(size * nmemb);
 	if (!dst)
@@ -26,7 +26,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 }
 
 ///////////////////
-
+/*
 #include "stdio.h"
 
 int	main(void)
@@ -40,4 +40,4 @@ int	main(void)
 		printf("%d\n", tab[i++]);
 	free(tab);
 	return (0);
-}
+}*/
