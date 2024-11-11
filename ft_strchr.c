@@ -24,7 +24,7 @@ char	*ft_strchr(const char *s, int c)
 }
 
 //////////////////// TEST
-
+/*
 #include <stdio.h>
 
 int	main(int ac, char **av)
@@ -42,4 +42,4 @@ int	main(int ac, char **av)
 	}
 	printf("Error\n");
 	return (1);
-}
+}*/
