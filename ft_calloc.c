@@ -16,12 +16,12 @@ void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*dst;
 
-	if (!nmemb || !size || (nmemb * size) > 2147483647)
+	if (!nmemb || !size || size > (2147483647 / nmemb))
 		return (NULL);
 	dst = malloc(size * nmemb);
 	if (!dst)
 		return (NULL);
-	ft_memset(dst, 0, nmemb);
+	ft_memset(dst, 0, nmemb * size);
 	return (dst);
 }
 
