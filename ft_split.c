@@ -6,7 +6,7 @@
 /*   By: lefoffan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 16:25:33 by lefoffan          #+#    #+#             */
-/*   Updated: 2024/11/11 16:25:33 by lefoffan         ###   ########.fr       */
+/*   Updated: 2024/11/12 11:10:31 by lefoffan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ char	**ft_split(char const *s, char c)
 {
 	char				**split;
 	unsigned int		i;
-	unsigned int		j; // split index
+	unsigned int		j;
 	size_t				lenword;
 
 	j = 0;

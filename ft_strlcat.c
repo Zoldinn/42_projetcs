@@ -6,7 +6,7 @@
 /*   By: lefoffan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 12:07:18 by lefoffan          #+#    #+#             */
-/*   Updated: 2024/11/07 11:55:41 by lefoffan         ###   ########.fr       */
+/*   Updated: 2024/11/12 11:04:27 by lefoffan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 }
 
 ////// TESTS
-
+/*
 int	main(int ac, char **av)
 {
 	size_t	result;
@@ -47,4 +47,4 @@ int	main(int ac, char **av)
 	}
 	printf("Error\n");
 	return (1);
-}
+}*/

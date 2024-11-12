@@ -6,7 +6,7 @@
 /*   By: lefoffan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 11:21:24 by lefoffan          #+#    #+#             */
-/*   Updated: 2024/11/07 12:21:05 by lefoffan         ###   ########.fr       */
+/*   Updated: 2024/11/12 11:08:25 by lefoffan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int	ft_atoi(const char *nptr)
 }
 
 ////////////////////
-
+/*
 #include <stdio.h>
 
 int	main(int ac, char **av)
@@ -48,4 +48,4 @@ int	main(int ac, char **av)
 	}
 	printf("ERROR\n");
 	return (1);
-}
+}*/

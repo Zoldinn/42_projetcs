@@ -6,7 +6,7 @@
 /*   By: lefoffan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 15:22:16 by lefoffan          #+#    #+#             */
-/*   Updated: 2024/11/11 15:22:16 by lefoffan         ###   ########.fr       */
+/*   Updated: 2024/11/12 11:11:57 by lefoffan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,18 +26,18 @@ static int	ft_ischarset(const char x, const char *set)
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char			*res;
-	size_t			endCurs;
+	size_t			end_curs;
 	unsigned int	start;
 
 	start = 0;
-	endCurs = ft_strlen(s1) - 1;
-	while (ft_ischarset(s1[endCurs], set))
-		endCurs--;
+	end_curs = ft_strlen(s1) - 1;
+	while (ft_ischarset(s1[end_curs], set))
+		end_curs--;
 	while (ft_ischarset(s1[start], set))
 		start++;
-	res = malloc(sizeof(char) * (endCurs + 1));
+	res = malloc(sizeof(char) * (end_curs + 1));
 	if (!res)
 		return (NULL);
-	res = ft_substr((const char *) s1, start, endCurs);
+	res = ft_substr((const char *) s1, start, end_curs);
 	return (res);
 }

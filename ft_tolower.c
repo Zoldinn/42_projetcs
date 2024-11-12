@@ -6,7 +6,7 @@
 /*   By: lefoffan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 09:34:35 by lefoffan          #+#    #+#             */
-/*   Updated: 2024/11/07 12:05:00 by lefoffan         ###   ########.fr       */
+/*   Updated: 2024/11/12 11:05:20 by lefoffan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,8 @@ int	ft_tolower(int c)
 	return (c + ('a' - 'A'));
 }
 
-
 ////////// TEST 
-
+/*
 #include <stdio.h>
 
 int	main(int ac, char **av)
@@ -31,4 +30,4 @@ int	main(int ac, char **av)
 	}
 	printf("Error\n");
 	return (1);
-}
+}*/

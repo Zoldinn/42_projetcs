@@ -6,7 +6,7 @@
 /*   By: lefoffan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 09:09:49 by lefoffan          #+#    #+#             */
-/*   Updated: 2024/11/07 12:04:57 by lefoffan         ###   ########.fr       */
+/*   Updated: 2024/11/12 11:08:38 by lefoffan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	ft_toupper(int c)
 }
 
 ////////// TEST 
-
+/*
 #include <stdio.h>
 
 int	main(int ac, char **av)
@@ -30,4 +30,4 @@ int	main(int ac, char **av)
 	}
 	printf("Error\n");
 	return (1);
-}
+}*/

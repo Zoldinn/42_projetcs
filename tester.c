@@ -6,12 +6,12 @@
 /*   By: lefoffan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 11:22:55 by lefoffan          #+#    #+#             */
-/*   Updated: 2024/11/11 11:57:54 by lefoffan         ###   ########.fr       */
+/*   Updated: 2024/11/12 11:13:28 by lefoffan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // TEST FT_MEMSET
-
+/*
 #include "libft.h"
 #include <stdio.h> // pour printf
 #include <string.h> // pour test vrai fonction
@@ -76,7 +76,6 @@ int	main(void) // ACTUELLEMENT POUR FT_MEMSET !
 	ft_check(INT_MAX, 5);
 	
 	printf("\n------------------------------------------------------------\n");
-	printf(
 	ft_check(INT_MIN, 5);
 	
 	printf("\n------------------------------------------------------------\n");
@@ -85,4 +84,4 @@ int	main(void) // ACTUELLEMENT POUR FT_MEMSET !
 	ft_check(50, 10);
 	
 	return (0);
-}
+}*/
