@@ -6,7 +6,7 @@
 /*   By: lefoffan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 16:56:17 by lefoffan          #+#    #+#             */
-/*   Updated: 2024/11/06 16:34:20 by lefoffan         ###   ########.fr       */
+/*   Updated: 2024/11/12 18:10:41 by lefoffan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	unsigned char		*d;
 	const unsigned char	*s;
 
+	if (!dest || !src || !n)
+		return (NULL);
 	d = (unsigned char *) dest;
 	s = (const unsigned char *) src;
 	i = 0;
@@ -26,5 +28,6 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 		d[i] = s[i];
 		i++;
 	}
+	d[i] = '\0';
 	return (dest);
 }	

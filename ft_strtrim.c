@@ -6,11 +6,11 @@
 /*   By: lefoffan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 15:22:16 by lefoffan          #+#    #+#             */
-/*   Updated: 2024/11/12 11:11:57 by lefoffan         ###   ########.fr       */
+/*   Updated: 2024/11/12 16:39:44 by lefoffan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "lifbt.h"
+#include "libft.h"
 
 static int	ft_ischarset(const char x, const char *set)
 {

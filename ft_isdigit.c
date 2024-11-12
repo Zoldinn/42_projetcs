@@ -6,7 +6,7 @@
 /*   By: lefoffan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 15:52:17 by lefoffan          #+#    #+#             */
-/*   Updated: 2024/11/08 10:59:22 by lefoffan         ###   ########.fr       */
+/*   Updated: 2024/11/12 18:01:44 by lefoffan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ int	ft_isdigit(int c)
 {
 	unsigned char	x;
 
+	if (c < 0 || c > 255)
+		return (0);
 	x = (unsigned char) c;
 	if (x >= '0' && x <= '9')
 		return (1);

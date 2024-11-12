@@ -6,7 +6,7 @@
 /*   By: lefoffan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 15:45:01 by lefoffan          #+#    #+#             */
-/*   Updated: 2024/11/08 10:54:06 by lefoffan         ###   ########.fr       */
+/*   Updated: 2024/11/12 17:59:49 by lefoffan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ int	ft_isalpha(int c)
 {
 	unsigned char	x;
 
+	if (c < 0 || c > 255)
+		return (0);
 	x = (unsigned char) c;
 	if ((x >= 'a' && x <= 'z') || (x >= 'A' && x <= 'Z'))
 		return (1);
