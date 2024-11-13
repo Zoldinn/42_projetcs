@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lefoffan <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: lefoffan <lefoffan@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 12:07:18 by lefoffan          #+#    #+#             */
-/*   Updated: 2024/11/13 11:49:11 by lefoffan         ###   ########.fr       */
+/*   Updated: 2024/11/14 00:55:17 by lefoffan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int	main(int ac, char **av)
 
 	if (ac == 4)
 	{
-		result = ft_strlcat(av[1], (const char *) av[2], (size_t) ft_atoi(av[3]));
+		result = ft_strlcat(av[1], av[2], (size_t) ft_atoi(av[3]));
 		printf("%zu\n", result);
 		printf("%s\n", av[1]);
 		return (0);

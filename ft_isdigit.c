@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lefoffan <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: lefoffan <lefoffan@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 15:52:17 by lefoffan          #+#    #+#             */
-/*   Updated: 2024/11/12 18:01:44 by lefoffan         ###   ########.fr       */
+/*   Updated: 2024/11/14 00:55:26 by lefoffan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,19 +23,3 @@ int	ft_isdigit(int c)
 		return (1);
 	return (0);
 }
-
-////////////////////
-/*
-#include <stdio.h>
-#include <ctype.h> // test la vrai fonction
-
-int	main(void)
-{
-	int	res;
-
-	res = -5945;
-	printf("test with : %d\nThat correspond to '%c'\n", res, (unsigned char) res);
-	printf("ft_isdigit : %d\n", ft_isdigit((unsigned char) res));
-	printf("isdigit : %d\n", isdigit((unsigned char) res));
-	return (0);
-}*/

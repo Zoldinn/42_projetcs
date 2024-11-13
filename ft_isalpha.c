@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lefoffan <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: lefoffan <lefoffan@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 15:45:01 by lefoffan          #+#    #+#             */
-/*   Updated: 2024/11/12 17:59:49 by lefoffan         ###   ########.fr       */
+/*   Updated: 2024/11/14 00:55:33 by lefoffan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,19 +23,3 @@ int	ft_isalpha(int c)
 		return (1);
 	return (0);
 }
-
-////////////////////
-/*
-#include <stdio.h>
-#include <ctype.h> // test la vrai fonction
-
-int	main(void)
-{
-	int	res;
-
-	res = 560000000;
-	printf("test with : %d\nThat correspond to '%c'\n", res, (unsigned char) res);
-	printf("ft_isalpha : %d\n", ft_isalpha((unsigned char) res));
-	printf("isalpha : %d\n", isalpha((unsigned char) res));
-	return (0);
-}*/
