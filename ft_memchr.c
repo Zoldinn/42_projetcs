@@ -6,7 +6,7 @@
 /*   By: lefoffan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 09:57:59 by lefoffan          #+#    #+#             */
-/*   Updated: 2024/11/13 15:11:34 by lefoffan         ###   ########.fr       */
+/*   Updated: 2024/11/13 17:52:33 by lefoffan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,11 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	if (!x)
 		return (NULL);
-	return ((void *) s);
+	return (x);
 }
 
 //////////////////////////
-
+/*
 #include <stdio.h>
 #include <string.h>
 
@@ -49,7 +49,7 @@ void run_memchr_test(const void *mem, size_t size, int c) {
         printf("    Résultat trouvé    : %p\n", result);
     }
 	else
-        printf("Test réussi : '%c' trouvé a %s\n", c, res);
+        printf("Test réussi");
 }
 
 int	main(void)
@@ -70,4 +70,4 @@ int	main(void)
 
 	// Test avec un caractère non trouvé
     run_memchr_test(str, 13, 'z');
-}
+}*/
