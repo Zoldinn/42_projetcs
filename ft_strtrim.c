@@ -6,7 +6,7 @@
 /*   By: lefoffan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 15:22:16 by lefoffan          #+#    #+#             */
-/*   Updated: 2024/11/12 16:39:44 by lefoffan         ###   ########.fr       */
+/*   Updated: 2024/11/13 14:57:53 by lefoffan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,25 @@ char	*ft_strtrim(char const *s1, char const *set)
 		end_curs--;
 	while (ft_ischarset(s1[start], set))
 		start++;
-	res = malloc(sizeof(char) * (end_curs + 1));
-	if (!res)
-		return (NULL);
 	res = ft_substr((const char *) s1, start, end_curs);
 	return (res);
 }
+
+/////////////////
+/*
+#include <stdio.h>
+
+int	main(void)
+{
+	char	str[] = "aloha";
+	char	set[] = "oa";
+	char	*res;
+
+	res = ft_strtrim(str, set);
+	if (res)
+		printf("%s\n", res);
+	else
+		printf("error\n");
+	free(res);
+	return (0);
+}*/

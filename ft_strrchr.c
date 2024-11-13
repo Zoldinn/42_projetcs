@@ -6,7 +6,7 @@
 /*   By: lefoffan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 09:45:43 by lefoffan          #+#    #+#             */
-/*   Updated: 2024/11/12 11:10:52 by lefoffan         ###   ########.fr       */
+/*   Updated: 2024/11/13 14:13:26 by lefoffan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@ char	*ft_strrchr(const char *s, int c)
 {
 	int	len;
 
-	len = ft_strlen(s);
+	len = ft_strlen(s) - 1;
 	while (s[len] != c)
 	{
-		if (s[len] == '\0' && c != '\0')
+		if (len < 0)
 			return (NULL);
 		len--;
 	}
@@ -30,19 +30,16 @@ char	*ft_strrchr(const char *s, int c)
 /*
 #include <stdio.h>
 
-int	main(int ac, char **av)
+int	main(void)
 {
 	char	*res;
 
-	if (ac == 3)
-	{
-		res = ft_strrchr(av[1], (int) av[2][0]);
-		if (res)
-			printf("Found !\n%s\n", res);
-		else
-			printf("Not Found...\n%s\n", res);
-		return (0);
-	}
-	printf("Error\n");
-	return (1);
+	res = ft_strrchr("sal\0ut ca \\0 va\0\0\0\0\0", 0);
+	if (*res == '\0')
+		printf("\\0 Found !\n");
+	else if (res)
+		printf("Found !\n%s\n", res);
+	else
+		printf("Not Found...\n");
+	return (0);
 }*/

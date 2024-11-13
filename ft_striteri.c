@@ -1,45 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lefoffan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/05 09:38:09 by lefoffan          #+#    #+#             */
-/*   Updated: 2024/11/13 14:20:07 by lefoffan         ###   ########.fr       */
+/*   Created: 2024/11/13 16:48:23 by lefoffan          #+#    #+#             */
+/*   Updated: 2024/11/13 17:01:03 by lefoffan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	while (*s != c)
+	size_t	i;
+
+	i = 0;
+	while (s[i])
 	{
-		if (*s == '\0' && c != '\0')
-			return (NULL);
-		s++;
+		(*f)(i, &s[i]);
+		i++;
 	}
-	return ((char *) s);
 }
 
-//////////////////// TEST
+/////////////////////////////
 /*
 #include <stdio.h>
 
-int	main(int ac, char **av)
+// si c est une lettre en pos pair et min -> maj
+static void	ft_up_pair(unsigned int i, char *c)
 {
-	char	*res;
+	if ((i % 2 == 0) && (*c >= 'a' && *c <= 'z'))
+		*c = (*c - ('a' - 'A'));
+}
 
-	if (ac == 3) // pour le test avec '\0' mettre 2
-	{
-		res = ft_strchr(av[1], av[2][0]); // pour le test avec '\0' mettre 0
-		if (res)
-			printf("Found !\n%s\n", res);
-		else
-			printf("Not Found...\n%s\n", res);
-		return (0);
-	}
-	printf("Error\n");
-	return (1);
+int	main(void)
+{
+	char	str[] = "Hello World !";
+
+	ft_striteri(str, &ft_up_pair);
+	printf("%s\n", str);
+	return (0);
 }*/

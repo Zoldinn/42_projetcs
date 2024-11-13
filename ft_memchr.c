@@ -6,7 +6,7 @@
 /*   By: lefoffan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 09:57:59 by lefoffan          #+#    #+#             */
-/*   Updated: 2024/11/12 17:49:35 by lefoffan         ###   ########.fr       */
+/*   Updated: 2024/11/13 15:11:34 by lefoffan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,8 @@ void	*ft_memchr(const void *s, int c, size_t n)
 }
 
 //////////////////////////
-/*
+
 #include <stdio.h>
-#include <assert.h>
 #include <string.h>
 
 // Fonction de test générique pour memchr
@@ -71,4 +70,4 @@ int	main(void)
 
 	// Test avec un caractère non trouvé
     run_memchr_test(str, 13, 'z');
-}*/
+}
