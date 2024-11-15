@@ -46,6 +46,8 @@ $(NAME): $(OBJ)
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
+# FAIRE REGLE BONUS
+
 clean:
 	@rm -f $(OBJ)
 
