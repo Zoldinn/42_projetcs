@@ -6,7 +6,7 @@
 /*   By: lefoffan <lefoffan@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 15:12:20 by lefoffan          #+#    #+#             */
-/*   Updated: 2024/11/15 10:41:52 by lefoffan         ###   ########.fr       */
+/*   Updated: 2024/11/15 17:34:41 by lefoffan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,17 +16,19 @@
 # include <unistd.h>
 # include <stdlib.h>
 
-typedef struct 		s_list
+typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
 }					t_list;
 
 t_list	*ft_lstnew(void *content);
-void	ft_lstadd_front(t_list **lst, t_list *new)
+t_list	*ft_lstlast(t_list *lst);
 size_t	ft_strlen(const char *s);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
+void	ft_lstadd_front(t_list **lst, t_list *new);
+void	ft_lstadd_back(t_list **lst, t_list *new);
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
@@ -58,6 +60,6 @@ int		ft_isascii(int c);
 int		ft_isalpha(int c);
 int		ft_isalnum(int c);
 int		ft_atoi(const char *nptr);
-
+int		ft_lstsize(t_list *lst);
 
 #endif

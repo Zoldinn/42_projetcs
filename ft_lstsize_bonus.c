@@ -6,7 +6,7 @@
 /*   By: lefoffan <lefoffan@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 15:17:50 by lefoffan          #+#    #+#             */
-/*   Updated: 2024/11/15 10:54:26 by lefoffan         ###   ########.fr       */
+/*   Updated: 2024/11/15 15:14:46 by lefoffan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,11 @@ int	ft_lstsize(t_list *lst)
 		size += 1;
 		lst = lst->next;
 	}
-	return(size);
+	return (size);
 }
 
 /* -- TESTS -- */
-
+/* 
 #include <stdio.h>
 
 void	ft_print_lst(t_list *list)
@@ -56,3 +56,4 @@ int	main(void)
 	ft_print_lst(first);
 	return (0);
 }
+ */

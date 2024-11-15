@@ -1,31 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast_bonus.c                                 :+:      :+:    :+:   */
+/*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lefoffan <lefoffan@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/15 10:42:22 by lefoffan          #+#    #+#             */
-/*   Updated: 2024/11/15 14:26:53 by lefoffan         ###   ########.fr       */
+/*   Created: 2024/11/15 15:18:18 by lefoffan          #+#    #+#             */
+/*   Updated: 2024/11/15 17:36:21 by lefoffan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstlast(t_list *lst)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	if (!lst)
-		return (NULL);
-	while (lst->next != NULL)
-		lst = lst->next;
-	return (lst);
+	t_list	*last;
+
+	if (!new)
+		return ;
+	last = ft_lstlast(*lst);
+	if (!last)
+	{
+		*lst = new;
+		return ;
+	}
+	last->next = new;
 }
 
-//---------- test ---------- //
-/*
+/*-- TEST --*/
+/* 
 #include <stdio.h>
 
 int	main(void)
 {
+	t_list	*head;
+
+	head = ft_lstnew(1);
+	ft_lstadd_back(&head, ft_lstnew(2));
+	printf("%d, %d\n", (int) head->content, (int) head->next->content);
+	free(head->next);
+	free(head);
 	return (0);
-}*/
+} */
