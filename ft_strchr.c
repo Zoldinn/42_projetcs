@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lefoffan <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: lefoffan <lefoffan@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 09:38:09 by lefoffan          #+#    #+#             */
-/*   Updated: 2024/11/13 14:20:07 by lefoffan         ###   ########.fr       */
+/*   Updated: 2024/11/18 17:44:56 by lefoffan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	while (*s != c)
+	while (*s != (char) c)
 	{
-		if (*s == '\0' && c != '\0')
+		if (*s == '\0' && (char) c != '\0')
 			return (NULL);
 		s++;
 	}

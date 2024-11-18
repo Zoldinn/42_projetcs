@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lefoffan <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: lefoffan <lefoffan@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 14:28:27 by lefoffan          #+#    #+#             */
-/*   Updated: 2024/11/12 17:52:07 by lefoffan         ###   ########.fr       */
+/*   Updated: 2024/11/18 16:18:11 by lefoffan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ static size_t	ft_int_len(long int n)
 {
 	size_t	size;
 
+	if (n == 0)
+		return (1);
 	size = 0;
 	if (n < 0)
 	{
@@ -34,7 +36,7 @@ char	*ft_itoa(int n)
 {
 	char		*res;
 	size_t		len;
-	int			i;
+	size_t		i;
 	long int	nbr;
 
 	i = 0;
@@ -46,21 +48,20 @@ char	*ft_itoa(int n)
 	if (nbr < 0)
 	{
 		nbr *= -1;
+		res[0] = '-';
 		i = 1;
 	}
 	res[len] = '\0';
-	while (nbr > 0 + i)
+	while (len > i)
 	{
 		res[--len] = '0' + (nbr % 10);
 		nbr /= 10;
 	}
-	if (i)
-		res[0] = '-';
 	return (res);
 }
 
 /////////////////////////////////////////////////////
-/*
+/* 
 #include <stdio.h>
 #include <limits.h>
 
@@ -68,11 +69,12 @@ int	main(void)
 {
 	char	*res;
 
-	res = ft_itoa(INT_MIN);
+	res = ft_itoa(INT_MAX);
 	if (res)
 		printf("%s\n", res);
 	else
 		printf("null\n");
 	free(res);
 	return (0);
-}*/
+}
+ */

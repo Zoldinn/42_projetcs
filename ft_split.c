@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lefoffan <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: lefoffan <lefoffan@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 16:25:33 by lefoffan          #+#    #+#             */
-/*   Updated: 2024/11/12 14:25:32 by lefoffan         ###   ########.fr       */
+/*   Updated: 2024/11/18 15:24:31 by lefoffan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static size_t	ft_count_word(const char *s, char c)
 	{
 		if (*s != c)
 			cw++;
-		while (*s != c && *s)
+		while (*s != c && *s && *(s + 1))
 			s++;
 		s++;
 	}
@@ -40,7 +40,7 @@ char	**ft_split(char const *s, char c)
 	if (!split)
 		return (NULL);
 	i = 0;
-	while (s[i])
+	while (s[i] && i < ft_strlen(s))
 	{
 		if (s[i] && s[i] != c)
 		{
@@ -48,9 +48,8 @@ char	**ft_split(char const *s, char c)
 			while (s[lenword] != c && s[lenword])
 				lenword++;
 			split[j++] = ft_substr(s, i, lenword - i);
+			i += lenword - i;
 		}
-		while (s[i] != c && s[i])
-			i++;
 		i++;
 	}
 	split[j] = NULL;

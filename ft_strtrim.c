@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lefoffan <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: lefoffan <lefoffan@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 15:22:16 by lefoffan          #+#    #+#             */
-/*   Updated: 2024/11/13 14:57:53 by lefoffan         ###   ########.fr       */
+/*   Updated: 2024/11/18 17:32:45 by lefoffan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static int	ft_ischarset(const char x, const char *set)
 {
 	while (*set)
 	{
-		if (x == *set && *set)
+		if (x == *set)
 			return (1);
 		set++;
 	}
@@ -25,9 +25,9 @@ static int	ft_ischarset(const char x, const char *set)
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	char			*res;
-	size_t			end_curs;
-	unsigned int	start;
+	char	*res;
+	size_t	end_curs;
+	size_t	start;
 
 	start = 0;
 	end_curs = ft_strlen(s1) - 1;
@@ -35,7 +35,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		end_curs--;
 	while (ft_ischarset(s1[start], set))
 		start++;
-	res = ft_substr((const char *) s1, start, end_curs);
+	res = ft_substr(s1, start, end_curs - start + 1);
 	return (res);
 }
 

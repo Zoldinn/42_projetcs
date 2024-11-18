@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lefoffan <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: lefoffan <lefoffan@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 07:50:56 by lefoffan          #+#    #+#             */
-/*   Updated: 2024/11/08 11:33:38 by lefoffan         ###   ########.fr       */
+/*   Updated: 2024/11/18 17:54:26 by lefoffan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*dst;
 
-	if (!nmemb || !size || size > (2147483647 / nmemb))
+	if (nmemb != 0 && size > (4294967295 / nmemb))
 		return (NULL);
 	dst = malloc(size * nmemb);
 	if (!dst)

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lefoffan <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: lefoffan <lefoffan@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 09:45:43 by lefoffan          #+#    #+#             */
-/*   Updated: 2024/11/13 14:13:26 by lefoffan         ###   ########.fr       */
+/*   Updated: 2024/11/18 17:44:19 by lefoffan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ char	*ft_strrchr(const char *s, int c)
 {
 	int	len;
 
-	len = ft_strlen(s) - 1;
-	while (s[len] != c)
+	len = ft_strlen(s);
+	while (s[len] != (char) c)
 	{
 		if (len < 0)
 			return (NULL);

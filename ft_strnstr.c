@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lefoffan <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: lefoffan <lefoffan@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 10:11:17 by lefoffan          #+#    #+#             */
-/*   Updated: 2024/11/12 11:08:53 by lefoffan         ###   ########.fr       */
+/*   Updated: 2024/11/18 16:45:12 by lefoffan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,16 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	char	*b;
 	char	*l;
+	size_t	size;
 
-	if (!little)
+	if (!*little)
 		return ((char *) big);
-	while (*big && len)
+	while (*big && len--)
 	{
 		b = (char *) big;
 		l = (char *) little;
-		while ((*b == *l) && *b && *l && len)
+		size = len + 1;
+		while ((*b == *l) && *b && *l && size--)
 		{
 			b++;
 			l++;
@@ -31,7 +33,6 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		if (!*l)
 			return ((char *) big);
 		big++;
-		len--;
 	}
 	return (NULL);
 }

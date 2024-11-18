@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lefoffan <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: lefoffan <lefoffan@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 15:02:36 by lefoffan          #+#    #+#             */
-/*   Updated: 2024/11/12 14:19:36 by lefoffan         ###   ########.fr       */
+/*   Updated: 2024/11/18 14:09:16 by lefoffan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,13 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*dst;
 	size_t	i;
+	size_t	size;
 
+	if (start > ft_strlen(s))
+		return (ft_strdup(""));
+	size = ft_strlen(s) - start;
+	if (len > size)
+		len = size;
 	dst = malloc(sizeof(char) * (len + 1));
 	if (!dst)
 		return (NULL);
