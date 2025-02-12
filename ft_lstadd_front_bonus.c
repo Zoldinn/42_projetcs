@@ -18,7 +18,7 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 	*lst = new;
 }
 /* -- TESTS -- */
-/*
+
 #include <stdio.h>
 
 void	ft_print_lst(t_list *list)
@@ -51,13 +51,10 @@ int	main(void)
 
 	head = ft_lstnew("sword_1");
 	new = ft_lstnew("sword_2");
-	ft_print_lst(head);
-	printf("\n-- rajout au debut de sword 2 --\n");
+
 	ft_lstadd_front(&head, new);
-	ft_print_lst(head);
-	//free_lst(head);
+
 	free(head->next);
 	free(head);
 	return (0);
 }
-*/
