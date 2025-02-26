@@ -6,13 +6,13 @@
 /*   By: lefoffan <lefoffan@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 10:42:22 by lefoffan          #+#    #+#             */
-/*   Updated: 2024/11/15 14:26:53 by lefoffan         ###   ########.fr       */
+/*   Updated: 2025/02/26 12:21:15 by lefoffan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstlast(t_list *lst)
+t_libft	*ft_lstlast(t_libft *lst)
 {
 	if (!lst)
 		return (NULL);

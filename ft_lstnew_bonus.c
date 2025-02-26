@@ -6,17 +6,17 @@
 /*   By: lefoffan <lefoffan@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 14:44:25 by lefoffan          #+#    #+#             */
-/*   Updated: 2024/11/14 16:07:46 by lefoffan         ###   ########.fr       */
+/*   Updated: 2025/02/26 12:21:16 by lefoffan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+t_libft	*ft_lstnew(void *content)
 {
-	t_list	*new_node;
+	t_libft	*new_node;
 
-	new_node = malloc(sizeof(t_list));
+	new_node = malloc(sizeof(t_libft));
 	if (!new_node)
 		return (NULL);
 	new_node->content = content;
@@ -30,7 +30,7 @@ t_list	*ft_lstnew(void *content)
 
 // int	main(void)
 // {
-// 	t_list	*head;
+// 	t_libft	*head;
 
 // 	head = ft_lstnew("Hello world !");
 // 	if (head->content)
